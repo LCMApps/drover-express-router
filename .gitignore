@@ -1,0 +1,7 @@
+/node_modules
+/coverage
+.idea
+yarn-error.log
+
+# MUST be the last line of this file
+!.gitkeep

@@ -1,0 +1,114 @@
+{
+  "name": "drover-express-router",
+  "version": "1.0.0",
+  "description": "Express router plugin for Drover control interface",
+  "main": "index.js",
+  "author": "Elijah Zakirov <elijah.zakirov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "yarn prettier:cmd --check \"README.md\" \"src/**/*.{json,js}\" \"config/*.{json,js}\"  \"tests/**/*.{json,js}\"",
+    "lint:fix": "yarn prettier",
+    "prettier": "yarn prettier:cmd --write \"README.md\" \"src/**/*.{json,js}\" \"config/*.{json,js}\"  \"tests/**/*.{json,js}\"",
+    "prettier:cmd": "prettier --config .prettierrc",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --opts tests/mocha.opts './tests//!(apps)**//*.js'",
+    "test:coverage": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --print both -- --opts tests/mocha.opts './tests//!(apps)**//*.js'",
+    "coveralls": "NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts tests/mocha.opts './tests//!(apps)**//*.js' && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint"
+    }
+  },
+  "lint-staged": {
+    "*.{md,json,js}": [
+      "yarn prettier:cmd --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LCMApps/drover-express-router"
+  },
+  "engines": {
+    "node": ">=8.1"
+  },
+  "keywords": [
+    "express",
+    "router",
+    "plugin",
+    "drover",
+    "cluster",
+    "graceful",
+    "release",
+    "orchestration",
+    "process",
+    "composite",
+    "utility",
+    "worker",
+    "healthcheck",
+    "applications",
+    "cli",
+    "fault tolerant",
+    "sysadmin",
+    "tools",
+    "pm2",
+    "pm2 analog",
+    "pm2 alternatives",
+    "pm2 similar",
+    "reload",
+    "load balancer",
+    "lb",
+    "load-balancer",
+    "kubernetes",
+    "k8s",
+    "runtime",
+    "source maps",
+    "graceful",
+    "microservice",
+    "programmatic",
+    "production",
+    "node.js monitoring",
+    "daemon",
+    "supervisor",
+    "supervisord",
+    "monitoring",
+    "process manager",
+    "container",
+    "keep process alive",
+    "clustering",
+    "cluster cli",
+    "cluster",
+    "docker",
+    "cron",
+    "devops",
+    "dev ops"
+  ],
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "body-parser": "^1.19.0",
+    "chai": "4.0.2",
+    "drover": "^1.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "istanbul": "1.1.0-alpha.1",
+    "lint-staged": "^8.1.5",
+    "mocha": "3.4.2",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "proxyquire": "1.8.0",
+    "sinon": "2.3.4",
+    "supertest": "3.0.0"
+  },
+  "files": [],
+  "bugs": {
+    "url": "https://github.com/LCMApps/drover-express-router/issues"
+  },
+  "homepage": "https://github.com/LCMApps/drover-express-router"
+}
