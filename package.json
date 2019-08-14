@@ -100,10 +100,7 @@
     "istanbul": "1.1.0-alpha.1",
     "lint-staged": "^8.1.5",
     "mocha": "3.4.2",
-    "nodemon": "^1.19.1",
     "prettier": "^1.16.4",
-    "pretty-quick": "^1.10.0",
-    "proxyquire": "1.8.0",
     "sinon": "2.3.4",
     "supertest": "3.0.0"
   },
