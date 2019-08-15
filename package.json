@@ -92,7 +92,7 @@
     "chai": "4.0.2",
     "coveralls": "^3.0.6",
     "drover": "^1.0.0",
-    "eslint": "^6.1.0",
+    "eslint": "5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
